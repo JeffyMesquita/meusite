@@ -23,7 +23,17 @@ class App extends Component{
   render(){
     return(
       <div>
-       
+        {
+          this.state.status ?
+          <div>
+            <h2>Bem-vindo ao Sistema</h2>
+            <button onClick={this.sair}>Sair do Sistema</button>
+          </div> :
+          <div>
+            <h2>Olá Visistante, faça o login!</h2>
+            <button onClick={this.entrar}>Entrar no Sistema</button>
+          </div>
+        }
       </div>
     ) 
   }
